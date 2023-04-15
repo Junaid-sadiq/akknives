@@ -1,29 +1,32 @@
 /* eslint-disable react/no-unescaped-entities */
 import Image from 'next/image';
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
 import { Facebook, Twitter } from 'react-feather';
 
 
 const Footer = () => {
-      function validateForm() {
-    var email = document.getElementById("nl-email").value;
-    var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-
-    if (email.match(pattern)) {
-      return true;
-    } else {
-      alert("Invalid email address");
-      return false;
-    }
+      const [email, setEmail] = useState("");
+ function handleSubmit(e) {
+  e.preventDefault();
+  var email = document.getElementById("nl-email").value;
+  var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+  
+  if (email.match(pattern)) {
+    window.location.href = `mailto:${email}`;
+    return true;
+  } else {
+    alert("Invalid email address");
+    return false;
   }
+}
   return (
     <div id='footer'>
         <div className="newsletter">
             <div className="container">
             <h2>GET QUOTE</h2>
-                <form className="newsletter-form-container" onSubmit={validateForm}>
-                    <input type="email" name="email" id="nl-email" placeholder='customersercive@akknives.me' />                    
+                <form className="newsletter-form-container"  onSubmit={handleSubmit}>
+                    <input type="email" name="email" id="nl-email" placeholder='john@doe.com' />                    
                     <button type='submit' className='nl-submit'>Send</button>
                 </form>
             </div>
