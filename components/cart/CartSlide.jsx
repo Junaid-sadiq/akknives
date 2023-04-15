@@ -15,13 +15,13 @@ const CartSlide = () => {
     updateCartItemQty,
     handleCartItemRemove,
   } = useStateContext();
-  const cartOpacBg = useRef();
-  const cartItemQnt = useRef();
+  const cartOpacBg = useRef(null);
+  const cartItemQnt = useRef(null);
 
-  const reRenderCartItemsQnt = (index, qtyFactor, cartItem) => {
-    updateCartItemQty(index, qtyFactor, cartItem);
-    cartItemQnt.innerHTML = cartItem[index]?.quantity;
-  };
+ const reRenderCartItemsQnt = (index, qtyFactor, cartItem) => {
+  updateCartItemQty(index, qtyFactor, cartItem);
+  cartItemQnt.current.innerHTML = cartItem[index]?.quantity;
+};
 
   useEffect(() => {
     document.addEventListener("click", (e) => {

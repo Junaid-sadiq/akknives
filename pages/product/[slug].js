@@ -6,7 +6,8 @@ import { client } from "../../lib/client";
 const ProductPage = ({ product, products }) => {
   return (
     <>
-      <Product product={product.result[0]} />
+      {/*  <Product product={product.result[0]} /> */}
+      {product.result && <Product product={product.result[0]} />}
       <Trending title="Peaple Also Viewed" trendProducts={products?.result} />
     </>
   );

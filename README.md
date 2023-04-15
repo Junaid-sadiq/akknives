@@ -4,7 +4,7 @@
 
 ## About The Project
 
-Akknives is an eCommerce website that minimalistic and simple design lifestyle enthusiasts can buy from.
+Akknives is an eCommerce website that minimalistic and simple design lifestyle enthusiasts can buy knives from.
 
 ### Built With:
 

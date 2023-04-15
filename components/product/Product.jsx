@@ -113,7 +113,7 @@ const Product = ({ product }) => {
             </div>
           </div>
           <div ref={specsGridColumnsNum} className="product-specs">
-            {characteristics.map((spec) => (
+            {characteristics.length > 1 && characteristics.map((spec) => (
               <div key={spec._key} className="spec">
                 <div className="spec-title">{spec.spec}:</div>
                 <div className="spec-desc">{spec.char}</div>
