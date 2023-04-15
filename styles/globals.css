@@ -83,7 +83,18 @@ a {
 .nav-item:hover {
   text-decoration: underline;
 }
+.social-icons {
+  /*  text-align: center; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
 
+.container-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .cart-container {
   position: relative;
   display: flex;

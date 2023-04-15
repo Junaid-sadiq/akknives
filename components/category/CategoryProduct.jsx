@@ -14,7 +14,8 @@ const CategoryProduct = ({ property, productDetails }) => {
             }`}
           >
             <img
-              src={urlFor(productDetails?.image[0])}
+               src={productDetails?.image && urlFor(productDetails.image[0])}
+             /*  src={urlFor(productDetails?.image[0])} */
               alt="a product"
               className="category-product-img"
             />

@@ -1,15 +1,30 @@
+/* eslint-disable react/no-unescaped-entities */
+import Image from 'next/image';
 import Link from 'next/link'
 import React from 'react'
+import { Facebook, Twitter } from 'react-feather';
+
 
 const Footer = () => {
+      function validateForm() {
+    var email = document.getElementById("nl-email").value;
+    var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+    if (email.match(pattern)) {
+      return true;
+    } else {
+      alert("Invalid email address");
+      return false;
+    }
+  }
   return (
     <div id='footer'>
         <div className="newsletter">
             <div className="container">
-            <h2>Newsletter</h2>
-                <form className="newsletter-form-container">
-                    <input type="email" name="email" id="nl-email" placeholder='john@doe.com' />                    
-                    <button type='submit' className='nl-submit'>Subscribe</button>
+            <h2>GET QUOTE</h2>
+                <form className="newsletter-form-container" onSubmit={validateForm}>
+                    <input type="email" name="email" id="nl-email" placeholder='customersercive@akknives.me' />                    
+                    <button type='submit' className='nl-submit'>Send</button>
                 </form>
             </div>
         </div>
@@ -17,30 +32,34 @@ const Footer = () => {
             <div className="container">
                 <div className="footer-menu-items">
                     <div className="nav-items">
-                            <Link href='#navbar'>
+                            <Link href='/category/all'>
+                                <span className="nav-item">All Products</span>
+                            </Link>
+
+                            <Link href='/category/premium'>
+                                <span className="nav-item">Premium Products</span>
+                            </Link>
+
+                            <Link href='/about'>
                                 <span className="nav-item">About</span>
-                            </Link>
-
-                            <Link href='#navbar'>
-                                <span className="nav-item">Store locator</span>
-                            </Link>
-
-                            <Link href='#navbar'>
-                                <span className="nav-item">FAQs</span>
-                            </Link>
-
-                            <Link href='#navbar'>
-                                <span className="nav-item">News</span>
-                            </Link>
-
-                            <Link href='#navbar'>
-                                <span className="nav-item">Careers</span>
-                            </Link>
-
-                            <Link href='#navbar'>
+                          </Link>
+                          <Link href='#navbar'>
                                 <span className="nav-item">Contact Us</span>
-                            </Link>
-                    </div>
+                          </Link>
+                        
+                      </div>
+                      {/*   <div className="cr social-icons">
+                              <Link href='https://www.twitter.com'>
+                              <span className="nav-item ">
+                                  <Twitter size={18} color='white'/>
+                              </span>
+                          </Link>
+                      <Link href='https://www.facebook.com'>
+                              <span className="nav-item social-icons">
+                                  <Facebook size={18} color='white'/>
+                              </span>
+                              </Link>
+                    </div> */}
                 <div className="cr">©2023 Akknives Inc. Pakistan</div>
                 </div>
             </div>

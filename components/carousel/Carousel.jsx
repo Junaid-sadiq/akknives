@@ -68,7 +68,7 @@ const Carousel = ({ carouselProducts }) => {
             <Link key={product._id} href={"/product/" + product.slug.current}>
               <div ref={card} className={styles.carouselCard}>
                 <img
-                  src={urlFor(product.image[0])}
+                  src={urlFor(product?.image && product.image[0])}
                   alt={product.name}
                   className={styles.cardImg}
                 />

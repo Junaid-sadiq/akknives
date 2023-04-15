@@ -57,7 +57,7 @@ const Navbar = () => {
             <div className="nav-items">
               <div className="nav-links nav-items">
                 <Link href="/category/all">
-                  <span className="nav-item">CATEGORIES</span>
+                  <span className="nav-item">PRODUCTS</span>
                 </Link>
                 <Link href="/category/premium">
                   <span className="nav-item">PREMIUM</span>
