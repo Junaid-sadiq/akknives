@@ -47,7 +47,7 @@ const HeroBanner = ({ hero }) => {
                 />
               </div>
             </Link>
-             <Link href="/category//kitchen%20knives">
+             <Link href="/category/kitchen%20knives">
            {/*    <Link href={`/category/${categories[1]?.title}`}> */}
               <div className="featured header-two">
                 <div className="header-img-container">

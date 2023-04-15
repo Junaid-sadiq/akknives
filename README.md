@@ -1,5 +1,5 @@
 <div align='center' >
-<img src="https://i.imgur.com/jrnzZO3.png" alt="Alt text" title="Optional title">
+<!-- <img src="https://i.imgur.com/jrnzZO3.png" alt="Alt text" title="Optional title"> -->
 </div>
 
 ## About The Project
@@ -30,7 +30,7 @@ To run this project on your local machine make sure you have the latest package 
 1. clone the repo:
 
 ```sh
-   git clone https://github.com/Abderraouf-Rahmani/ecommerce.git
+   git clone https://github.com/Junaid-sadiq/akknives.git
 ```
 
 2.  Install NPM packages
@@ -64,17 +64,3 @@ yarn dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-## Roadmap
-
-- [x] Make the website responsive
-- [x] Add Success and Cancelled pages
-- [ ] Add swiping functionality for the product's carousel.
-- [ ] Add a filter to sort products by price.
-- [ ] Multi-language Support
-  - [ ] French
-  - [ ] Arabic
-
-## Contact
-
-Feel free to connect with me on [Linkedin](https://www.linkedin.com/in/a-rahmani/)
